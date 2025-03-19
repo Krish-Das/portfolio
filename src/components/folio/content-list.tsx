@@ -49,7 +49,7 @@ const Title = forwardRef<HTMLHeadingElement, TitleProps>(
       <h4
         ref={ref}
         className={cn(
-          "contentlist-title leading-8 font-semibold md:leading-none",
+          "contentlist-title leading-8 font-medium md:leading-none",
           className
         )}
         {...rest}

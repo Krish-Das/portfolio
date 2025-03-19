@@ -13,7 +13,7 @@ const Root = forwardRef<HTMLDivElement, RootProps>(
       <section
         ref={ref}
         className={cn(
-          "section-root relative mx-auto w-full max-w-[55ch]",
+          "section-root relative mx-auto w-full max-w-[50ch] space-y-6",
           className
         )}
         {...rest}
@@ -33,7 +33,7 @@ const Title = forwardRef<HTMLHeadingElement, TitleProps>(
       <h3
         ref={ref}
         className={cn(
-          "section-title text-label-secondary leading-15 capitalize md:absolute md:top-0 md:left-0 md:-translate-x-full md:pr-5.5 md:leading-none",
+          "section-title text-label-secondary text-sm font-medium capitalize",
           className
         )}
         {...rest}
