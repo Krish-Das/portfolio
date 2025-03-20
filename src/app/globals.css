@@ -46,18 +46,22 @@
   --fill-tertiary-opacity: 12%;
   --fill-quaternary-opacity: 8%;
 
-  --label-primary: color-mix(in oklab, var(--label-primary-color) var(--label-primary-opacity), transparent);
-  --label-secondary: color-mix(in oklab, var(--label-secondary-color) var(--label-secondary-opacity), transparent);
-  --label-tertiary: color-mix(in oklab, var(--label-secondary-color) var(--label-tertiary-opacity), transparent);
-  --label-quaternary: color-mix(in oklab, var(--label-secondary-color) var(--label-quaternary-opacity), transparent);
+  --label-primary: color-mix( in oklab, var(--label-primary-color) var(--label-primary-opacity), transparent);
+  --label-secondary: color-mix( in oklab, var(--label-secondary-color) var(--label-secondary-opacity), transparent);
+  --label-tertiary: color-mix( in oklab, var(--label-secondary-color) var(--label-tertiary-opacity), transparent);
+  --label-quaternary: color-mix( in oklab, var(--label-secondary-color) var(--label-quaternary-opacity), transparent);
 
-  --fill-primary: color-mix(in oklab, var(--fill-color) var(--fill-primary-opacity), transparent);
-  --fill-secondary: color-mix(in oklab, var(--fill-color) var(--fill-secondary-opacity), transparent);
-  --fill-tertiary: color-mix(in oklab, var(--fill-color) var(--fill-tertiary-opacity), transparent);
-  --fill-quaternary: color-mix(in oklab, var(--fill-color) var(--fill-quaternary-opacity), transparent);
+  --fill-primary: color-mix( in oklab, var(--fill-color) var(--fill-primary-opacity), transparent);
+  --fill-secondary: color-mix( in oklab, var(--fill-color) var(--fill-secondary-opacity), transparent);
+  --fill-tertiary: color-mix( in oklab, var(--fill-color) var(--fill-tertiary-opacity), transparent);
+  --fill-quaternary: color-mix( in oklab, var(--fill-color) var(--fill-quaternary-opacity), transparent);
 
-  --separator-opaque: color-mix(in oklab, var(--separator-opaque-color) 100%, transparent);
-  --separator-non-opaque: color-mix(in oklab, var(--separator-non-opaque-color) var(--separator-non-opaque-opacity), transparent);
+  --separator-opaque: color-mix( in oklab, var(--separator-opaque-color) 100%, transparent);
+  --separator-non-opaque: color-mix( in oklab, var(--separator-non-opaque-color) var(--separator-non-opaque-opacity), transparent);
+
+  --selection-foreground-color:  color-mix(in oklab, var(--ios-blue) 12%, var(--label-primary-color));
+  --selection-background-color:  var(--ios-blue); /* oklch(47.34% 0.158966 255.5472); */
+  --selection-background-opacity: 20%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,7 +84,6 @@
     --ios-purple: oklch(65.6% 0.2274 312.42);
     --ios-pink: oklch(65.77% 0.2317 16.02);
     --ios-brown: oklch(66.5% 0.0637 72.95);
-
 
     --gray-1: oklch(64.83% 0.0073 286.19);
     --gray-2: oklch(50.07% 0.0047 286.23);
@@ -105,6 +108,8 @@
     --fill-secondary-opacity: 32%;
     --fill-tertiary-opacity: 24%;
     --fill-quaternary-opacity: 18%;
+
+    --selection-background-opacity: 30%;
   }
 
   html {
@@ -159,4 +164,16 @@ body {
   --color-fill-quaternary: var(--fill-quaternary);
   --color-separator-opaque: var(--separator-opaque);
   --color-separator-non-opaque: var(--separator-non-opaque);
+
+  --font-geist-mono: var(--font-geist-mono), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  color: var(--selection-foreground-color);
+  background-color: color-mix(in oklab, var(--selection-background-color) var(--selection-background-opacity), transparent); 
+}
+
+::-moz-selection {
+  color: var(--selection-foreground-color);
+  background-color: color-mix(in oklab, var(--selection-background-color) var(--selection-background-opacity), transparent); 
 }
