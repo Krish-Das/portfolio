@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 
-import { MatArrowBack } from "../icons/material-icons/ArrowBack"
+import { MatArrowBack } from "../icons/material-icons"
 import { Button } from "../ui/button"
 
 export default function Back({

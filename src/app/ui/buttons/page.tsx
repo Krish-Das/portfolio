@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/folio/section"
-import { IonPlay } from "@/components/icons/ion-icons/Play"
+import { IonPlay } from "@/components/icons/ion-icons"
 
 export default function Page() {
   return (

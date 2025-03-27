@@ -1,3 +1,5 @@
-import { IonMdPlay, IonPlay } from "./Play"
+import { IonLinkOutline } from "./link"
+import { IonMdPlay, IonPlay } from "./play"
+import { IonShare, IonShareOutline } from "./share"
 
-export { IonPlay, IonMdPlay }
+export { IonPlay, IonMdPlay, IonShare, IonShareOutline, IonLinkOutline }

@@ -1,14 +1,21 @@
-import { MatArrowBack, MatArrowBackRounded } from "./ArrowBack"
-import { MatArrowForward, MatArrowForwardRounded } from "./ArrowForward"
+import { MatArrowBack, MatArrowBackRounded } from "./arrow-back"
+import { MatArrowForward, MatArrowForwardRounded } from "./arrow-forward"
 import {
   MatArrowInsert,
   MatArrowInsertRounded,
   MatArrowOutward,
   MatArrowOutwardRounded,
-} from "./ArrowInsert"
-import { MatDownloading, MatDownloadingRounded } from "./DownloadingRounded"
-import { MatDownloadRounded, MatDownloadSharp } from "./DownloadSharp"
-import { MatMailRounded, MatMailSharp } from "./MailRounded"
+} from "./arrow-insert"
+import { MatDownloadRounded, MatDownloadSharp } from "./download-sharp"
+import { MatDownloading, MatDownloadingRounded } from "./downloading-rounded"
+import { MatLink, MatLinkRounded } from "./link"
+import {
+  MatLocationOn,
+  MatLocationOnOutline,
+  MatLocationOnOutlineRounded,
+  MatLocationOnRounded,
+} from "./location"
+import { MatMailRounded, MatMailSharp } from "./mail-rounded"
 
 export {
   MatDownloading,
@@ -25,4 +32,10 @@ export {
   MatArrowInsertRounded,
   MatArrowOutward,
   MatArrowOutwardRounded,
+  MatLink,
+  MatLinkRounded,
+  MatLocationOn,
+  MatLocationOnOutline,
+  MatLocationOnRounded,
+  MatLocationOnOutlineRounded,
 }
