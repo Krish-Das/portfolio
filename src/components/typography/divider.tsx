@@ -2,14 +2,17 @@ import { ComponentPropsWithoutRef, forwardRef } from "react"
 
 import { cn } from "@/lib/utils"
 
-type DividerProps = ComponentPropsWithoutRef<"hr">
+type DividerProps = ComponentPropsWithoutRef<"hr"> & {
+  opaque?: boolean
+}
 const Divider = forwardRef<HTMLHRElement, DividerProps>(
-  ({ className, ...rest }, ref) => {
+  ({ className, opaque, ...rest }, ref) => {
     return (
       <hr
         ref={ref}
         className={cn(
-          "bg-separator-opaque my-2 h-px w-full rounded-full border-none outline-none",
+          "my-2 h-px w-full rounded-full border-none outline-none",
+          opaque ? "bg-separator-opaque" : "bg-separator-non-opaque",
           className
         )}
         {...rest}
