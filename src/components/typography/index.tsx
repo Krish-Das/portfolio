@@ -1,8 +1,9 @@
 import { Divider } from "./divider"
 import { Heading } from "./heading"
 import { Paragraph } from "./paragraph"
+import { Prose } from "./prose"
 
-export { Heading, Paragraph, Divider }
+export { Heading, Paragraph, Divider, Prose }
 
 /* -------------------------------------------------------------------------------------------------
  * Rename
@@ -18,10 +19,10 @@ export { Heading, Paragraph, Divider }
 /* -------------------------------------------------------------------------------------------------
  * Rename
  * -----------------------------------------------------------------------------------------------*/
-// type HeadingProps = ComponentPropsWithoutRef<"XXX"> & {
+// type RenameProps = ComponentPropsWithoutRef<"XXX"> & {
 //   asChild?: boolean
 // }
-// const Rename = forwardRef<XX, HeadingProps>(
+// const Rename = forwardRef<XX, RenameProps>(
 //   ({ className, asChild, ...rest }, ref) => {
 //     const Comp = asChild ? Slot : "XXX"
 //
