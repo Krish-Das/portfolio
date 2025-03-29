@@ -16,7 +16,7 @@ const Ul = forwardRef<HTMLUListElement, UlProps>(
       <Comp
         ref={ref}
         className={cn(
-          "mb-4 pl-4",
+          "mb-4 flex flex-col gap-1 pl-4",
           "[&>li]:before:absolute [&>li]:before:-translate-x-3.5 [&>li]:before:content-['•']",
           className
         )}

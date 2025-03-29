@@ -16,7 +16,7 @@ const Anchor = forwardRef<HTMLAnchorElement, AnchorProps>(
       <Comp
         ref={ref}
         className={cn(
-          "text-ios-blue font-medium brightness-115 -hue-rotate-5",
+          "text-ios-blue font-medium brightness-115 -hue-rotate-5 hover:underline underline-offset-2",
           className
         )}
         {...rest}
