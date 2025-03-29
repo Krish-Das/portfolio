@@ -1,9 +1,15 @@
+import { Anchor } from "./anchor"
+import { Code } from "./code"
 import { Divider } from "./divider"
+import { Em } from "./em"
 import { Heading } from "./heading"
+import { Li } from "./li"
 import { Paragraph } from "./paragraph"
 import { Prose } from "./prose"
+import { Strong } from "./strong"
+import { Ul } from "./ul"
 
-export { Heading, Paragraph, Divider, Prose }
+export { Heading, Paragraph, Strong, Em, Ul, Li, Anchor, Code, Divider, Prose }
 
 /* -------------------------------------------------------------------------------------------------
  * Rename
@@ -30,3 +36,5 @@ export { Heading, Paragraph, Divider, Prose }
 //   }
 // )
 // Rename.displayName = "Rename"
+//
+// export { Rename, type RenameProps }

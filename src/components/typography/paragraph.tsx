@@ -2,19 +2,14 @@ import { ComponentPropsWithoutRef, forwardRef } from "react"
 
 import { cn } from "@/lib/utils"
 
-type ParagraphProps = ComponentPropsWithoutRef<"p"> & {
-  highContrast?: boolean
-}
+type ParagraphProps = ComponentPropsWithoutRef<"p"> & {}
 const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
-  ({ className, highContrast, ...rest }, ref) => {
+  ({ className, ...rest }, ref) => {
     return (
       <p
         ref={ref}
         className={cn(
-          "pb-4.5 [&_strong]:font-semibold [&_strong]:-tracking-[0.015em] [&:has(+h2)]:pb-6",
-          highContrast
-            ? "text-label-primary-color/88"
-            : "text-label-primary-color/82 [&_strong]:text-label-primary-color/88",
+          "text-label-primary/86 mb-4 text-base leading-6 font-normal tracking-[0em]",
           className
         )}
         {...rest}

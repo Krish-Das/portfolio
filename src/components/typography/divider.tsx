@@ -11,7 +11,7 @@ const Divider = forwardRef<HTMLHRElement, DividerProps>(
       <hr
         ref={ref}
         className={cn(
-          "my-2 h-px w-full rounded-full border-none outline-none",
+          "my-8 h-0.5 w-full rounded-full border-none outline-none [&_+*]:mt-0",
           opaque ? "bg-separator-opaque" : "bg-separator-non-opaque",
           className
         )}

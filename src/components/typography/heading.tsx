@@ -3,26 +3,27 @@ import { cva, VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-const headingVariants = cva("text-label-primary", {
-  variants: {
-    level: {
-      h1: "text-4xl leading-tight font-bold -tracking-[0.015em] py-4",
-      h2: "py-4.5 text-xl leading-tight font-semibold -tracking-[0.015em] [&:has(+h3)]:pb-2 [&:has(+h3)+h3]:pt-1.5",
-      // h2: "text-label-primary/88 py-5 text-2xl leading-tight font-bold -tracking-[0.015em] [&:has(+h3)]:pb-0"
-      h3: "py-4 text-lg leading-tight font-semibold -tracking-[0.015em] [&:has(+p)]:pb-3",
-      // h3: "text-xl font-semibold -tracking-[0.015em] py-4 [&:has(+p)]:pb-3"
-      h4: "text-lg font-semibold -tracking-[0.015em] py-4 [&:has(+p)]:pb-3",
+const headingVariants = cva(
+  "text-label-primary/86 dark:text-label-primary/90",
+  {
+    variants: {
+      level: {
+        h1: "text-4xl leading-tight font-bold -tracking-[0.015em] py-4 text-ios-pink dark:text-ios-pink",
+        h2: "mt-12 mb-3 text-2xl leading-8 font-bold -tracking-[0.00625em]",
+        h3: "mt-10 mb-2 text-lg leading-6.5 font-semibold -tracking-[0.0025em]",
+        h4: "text-lg font-semibold -tracking-[0.015em] py-4 [&:has(+p)]:pb-3 text-ios-pink dark:text-ios-pink",
+      },
+      srOnly: {
+        true: "hidden",
+        false: "",
+      },
     },
-    srOnly: {
-      true: "hidden",
-      false: "",
+    defaultVariants: {
+      level: "h1",
+      srOnly: false,
     },
-  },
-  defaultVariants: {
-    level: "h1",
-    srOnly: false,
-  },
-})
+  }
+)
 type Levels = NonNullable<VariantProps<typeof headingVariants>["level"]>
 
 type HeadingProps = ComponentPropsWithoutRef<Levels> &

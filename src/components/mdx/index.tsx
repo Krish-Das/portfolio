@@ -1,6 +1,14 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc"
 
-import { Divider } from "../typography"
+import {
+  Anchor,
+  Code as code,
+  Divider,
+  Em as em,
+  Li as li,
+  Strong as strong,
+  Ul as ul,
+} from "../typography"
 import { H2 as h2, H3 as h3 } from "./heading"
 import { Paragraph as p } from "./paragraph"
 
@@ -8,6 +16,12 @@ const customComponents = {
   h2,
   h3,
   p,
+  strong,
+  em,
+  ul,
+  li,
+  a: Anchor,
+  code,
   hr: Divider,
 }
 
