@@ -3,19 +3,14 @@ import Link from "next/link"
 import { formatDate } from "@/lib/utils"
 import { ArticleType } from "@/lib/writing/utils"
 import { Container } from "@/components/ui/container"
-import { Section } from "@/components/ui/section"
-import { Heading } from "@/components/typography"
+import { Section, SectionHeading } from "@/components/ui/section"
 
 export default function Writings({ articles }: { articles: ArticleType[] }) {
   return (
     <Container shorterWidth asChild>
       <Section>
-        <Heading
-          level="h3"
-          className="section-title text-label-secondary text-sm font-medium tracking-normal"
-        >
-          Writings
-        </Heading>
+        <SectionHeading>Writings</SectionHeading>
+
         <ul className="flex flex-col gap-2">
           {articles.map(({ slug, metadata }) => (
             <li key={slug} className="h-fit">

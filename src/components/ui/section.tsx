@@ -3,6 +3,8 @@ import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils"
 
+import { Heading, HeadingProps } from "../typography/heading"
+
 /* -------------------------------------------------------------------------------------------------
  * Section
  * -----------------------------------------------------------------------------------------------*/
@@ -29,4 +31,18 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
 )
 Section.displayName = "Section"
 
-export { Section, type SectionProps }
+const SectionHeading = ({ className, ...rest }: HeadingProps) => {
+  return (
+    <Heading
+      {...rest}
+      level="h2"
+      styleAs="h3"
+      className={cn(
+        "section-title text-label-secondary dark:text-label-secondary mb-2.5 text-sm font-medium tracking-normal",
+        className
+      )}
+    />
+  )
+}
+
+export { Section, SectionHeading, type SectionProps }
