@@ -12,12 +12,14 @@ export default function CTA() {
   return (
     <Container shorterWidth asChild>
       <Section className="flex items-center justify-start gap-4 pt-3 md:gap-6">
-        <Button className="bg-fill-tertiary text-ios-blue" size="lg">
+        <Button
+          className="bg-ios-blue/[var(--fill-tertiary-opacity)] text-ios-blue Xbg-fill-tertiary"
+          size="lg"
+        >
           <MatDownloadingRounded />
           Download CV.
         </Button>
 
-        {/* TODO: Use the Divider component */}
         <Divider className="h-4 w-1" />
 
         <div className="[&_button]:text-gray-1 [&_button]:bg-fill-quaternary flex items-center gap-2">
