@@ -1,23 +1,17 @@
 import { createElement } from "react"
 
-import { cn } from "@/lib/utils"
+import { cn, slugify } from "@/lib/utils"
 
+import { MatLink } from "../icons/material-icons"
 import { headingVariants } from "../typography/heading"
-
-function slugify(str: string) {
-  return str
-    .toString()
-    .toLowerCase()
-    .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
-    .replace(/\-\-+/g, "-") // Replace multiple - with single -
-}
 
 function createHeading(level: 2 | 3) {
   const Heading = ({ children }: { children: string }) => {
     const slug = slugify(children)
+
+    const AnchorIcon = (
+      <MatLink className="text-label-secondary/0 group-hover:text-label-secondary text-[1em] transition-colors duration-250" />
+    )
 
     return createElement(
       `h${level}`,
@@ -35,11 +29,11 @@ function createHeading(level: 2 | 3) {
             href: `#${slug}`,
             key: `link-${slug}`,
             className: cn(
-              "anchor pr-1 font-normal text-label-quaternary group:hover group-hover:text-label-secondary transition-colors hidden"
+              "heading-anchor group absolute inset-0 inline-flex items-start justify-end py-0.5 select-none"
             ),
             "aria-hidden": true,
           },
-          "#"
+          AnchorIcon
         ),
       ],
       children
