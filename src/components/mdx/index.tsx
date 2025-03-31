@@ -2,6 +2,8 @@ import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc"
 
 import {
   Anchor,
+  Blockquote as blockquote,
+  Cite,
   Code as code,
   Divider,
   Em as em,
@@ -20,6 +22,8 @@ const customComponents = {
   em,
   ul,
   li,
+  blockquote,
+  Cite,
   a: Anchor,
   code,
   hr: Divider,

@@ -1,4 +1,6 @@
 import { Anchor } from "./anchor"
+import { Blockquote } from "./blockquote"
+import { Cite } from "./cite"
 import { Code } from "./code"
 import { Divider } from "./divider"
 import { Em } from "./em"
@@ -9,7 +11,20 @@ import { Prose } from "./prose"
 import { Strong } from "./strong"
 import { Ul } from "./ul"
 
-export { Heading, Paragraph, Strong, Em, Ul, Li, Anchor, Code, Divider, Prose }
+export {
+  Heading,
+  Paragraph,
+  Strong,
+  Em,
+  Ul,
+  Li,
+  Blockquote,
+  Cite,
+  Anchor,
+  Code,
+  Divider,
+  Prose,
+}
 
 /* -------------------------------------------------------------------------------------------------
  * Rename
