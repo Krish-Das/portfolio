@@ -4,9 +4,10 @@ import {
   Anchor,
   Blockquote as blockquote,
   Cite,
-  Code as code,
+  Code,
   Divider,
   Em as em,
+  InlineCode,
   Li as li,
   Strong as strong,
   Ul as ul,
@@ -25,7 +26,8 @@ const customComponents = {
   blockquote,
   Cite,
   a: Anchor,
-  code,
+  code: InlineCode,
+  pre: Code,
   hr: Divider,
 }
 

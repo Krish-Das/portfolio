@@ -5,6 +5,7 @@ import { Code } from "./code"
 import { Divider } from "./divider"
 import { Em } from "./em"
 import { Heading } from "./heading"
+import { InlineCode } from "./inline-code"
 import { Li } from "./li"
 import { Paragraph } from "./paragraph"
 import { Prose } from "./prose"
@@ -22,6 +23,7 @@ export {
   Cite,
   Anchor,
   Code,
+  InlineCode,
   Divider,
   Prose,
 }

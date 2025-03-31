@@ -1,22 +1,18 @@
 import { ComponentPropsWithoutRef, forwardRef } from "react"
-import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils"
 
 /* -------------------------------------------------------------------------------------------------
- * Code
+ * InlineCode
  * -----------------------------------------------------------------------------------------------*/
-type CodeProps = ComponentPropsWithoutRef<"code"> & {
-  asChild?: boolean
-}
-const Code = forwardRef<HTMLElement, CodeProps>(
-  ({ className, asChild, ...rest }, ref) => {
-    const Comp = asChild ? Slot : "code"
+type InlineCodeProps = ComponentPropsWithoutRef<"code">
+const InlineCode = forwardRef<HTMLElement, InlineCodeProps>(
+  ({ className, ...rest }, ref) => {
     return (
-      <Comp
+      <code
         ref={ref}
         className={cn(
-          "font-jetbrains-mono",
+          "font-jetbrains-mono bg-fill-quaternary border-fill-tertiary rounded-lg border px-1.5 py-0.5 text-[0.85em] leading-none tracking-normal break-words",
           className
         )}
         {...rest}
@@ -24,5 +20,5 @@ const Code = forwardRef<HTMLElement, CodeProps>(
     )
   }
 )
-Code.displayName = "Code"
-export { Code, type CodeProps }
+InlineCode.displayName = "InlineCode"
+export { InlineCode, type InlineCodeProps }
