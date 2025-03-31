@@ -16,7 +16,7 @@ const Code = forwardRef<HTMLElement, CodeProps>(
       <Comp
         ref={ref}
         className={cn(
-          "font-jetbrains-mono bg-fill-quaternary border-fill-tertiary rounded-lg border px-1.5 py-0.5 text-sm leading-none",
+          "font-jetbrains-mono bg-fill-quaternary border-fill-tertiary rounded-lg border px-1.5 py-0.5 text-[0.85em] leading-none tracking-normal",
           className
         )}
         {...rest}
