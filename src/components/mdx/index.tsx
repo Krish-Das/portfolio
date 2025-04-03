@@ -7,6 +7,7 @@ import {
   Code,
   Divider,
   Em as em,
+  Image as img,
   InlineCode,
   Li as li,
   Strong as strong,
@@ -29,6 +30,7 @@ const customComponents = {
   code: InlineCode,
   pre: Code,
   hr: Divider,
+  img,
 }
 
 export function CustomMDX(props: MDXRemoteProps) {

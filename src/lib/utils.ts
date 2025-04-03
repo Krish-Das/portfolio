@@ -1,6 +1,8 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
+import { baseURL } from "./constants"
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
@@ -59,4 +61,28 @@ export function slugify(str: string) {
     .replace(/&/g, "-and-") // Replace & with 'and'
     .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
     .replace(/\-\-+/g, "-") // Replace multiple - with single -
+}
+
+export type BaseURLParts = {
+  protocol: "http" | "https"
+  hostname: string
+  port: string | undefined
+}
+export function parseBaseURL(): BaseURLParts {
+  const url = baseURL
+  const match = url.match(/^(https?):\/\/([^:]+)(?::(\d+))?$/)
+
+  if (!match) {
+    throw new Error("Invalid baseURL format")
+  }
+
+  const protocol = match[1] as "http" | "https"
+  const hostname = match[2]
+  const port = match[3]
+
+  return {
+    protocol,
+    hostname,
+    port,
+  }
 }

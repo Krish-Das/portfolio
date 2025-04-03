@@ -5,6 +5,7 @@ import { Code } from "./code"
 import { Divider } from "./divider"
 import { Em } from "./em"
 import { Heading } from "./heading"
+import { Image } from "./image"
 import { InlineCode } from "./inline-code"
 import { Li } from "./li"
 import { Paragraph } from "./paragraph"
@@ -26,6 +27,7 @@ export {
   InlineCode,
   Divider,
   Prose,
+  Image,
 }
 
 /* -------------------------------------------------------------------------------------------------
