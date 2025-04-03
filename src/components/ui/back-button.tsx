@@ -17,7 +17,7 @@ export default function Back({
   return (
     <Button
       size="sm"
-      className="text-label-secondary data-[hovered]:bg-fill-secondary pl-0 transition-all data-[hovered]:pl-2.5"
+      className="text-label-secondary data-[hovered]:bg-fill-secondary pl-0 transition-all duration-250 data-[hovered]:pl-2.5"
       onPress={() => router.push(url)}
     >
       <MatArrowBack />
