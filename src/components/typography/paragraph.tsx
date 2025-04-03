@@ -1,10 +1,14 @@
-import { ComponentPropsWithoutRef, forwardRef } from "react"
+import { ComponentPropsWithoutRef, forwardRef, isValidElement } from "react"
 
 import { cn } from "@/lib/utils"
 
 type ParagraphProps = ComponentPropsWithoutRef<"p"> & {}
 const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
   ({ className, ...rest }, ref) => {
+    // NOTE: If valid reactChild, don't render inside p.
+    const children = rest.children
+    if (!Array.isArray(children) && isValidElement(children)) return children
+
     return (
       <p
         ref={ref}
