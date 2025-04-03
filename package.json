@@ -18,6 +18,7 @@
     "next": "15.1.6",
     "next-mdx-remote": "^5.0.0",
     "postcss": "^8.5.3",
+    "prism-react-renderer": "^2.4.1",
     "react": "^19.0.0",
     "react-aria-components": "^1.7.1",
     "react-dom": "^19.0.0",
