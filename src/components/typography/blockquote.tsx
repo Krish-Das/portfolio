@@ -17,9 +17,11 @@ const Blockquote = forwardRef<HTMLQuoteElement, BlockquoteProps>(
       <Comp
         ref={ref}
         className={cn(
-          "font-red0i relative my-10 pl-5 not-italic [&>:last-child]:mb-0",
-          "[&_p]:text-label-primary [&_p]:text-[1.1rem] [&_p]:leading-6.5 [&_p]:font-medium [&_p]:tracking-normal",
-          "before:bg-separator-opaque before:absolute before:top-0 before:left-0 before:h-full before:w-0.5 before:rounded-full before:content-['']",
+          "relative my-10 pl-4.5 not-italic [&>:last-child]:mb-0",
+          "[&_p]:font-instrument-serif [&_p]:tracking-[0.00625em] [&_p]:italic",
+          // "[&_p]:font-garamond [&_p]:italic [&_p]:tracking-normal",
+          "[&_p]:text-label-primary [&_p]:text-[1.5rem] [&_p]:leading-8.5",
+          "before:bg-gray-5 before:absolute before:top-0 before:left-0 before:h-full before:w-0.75 before:content-['']",
           className
         )}
         {...rest}

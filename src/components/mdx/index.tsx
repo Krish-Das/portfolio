@@ -10,11 +10,11 @@ import {
   Image as img,
   InlineCode,
   Li as li,
+  Paragraph as p,
   Strong as strong,
   Ul as ul,
 } from "../typography"
 import { H2 as h2, H3 as h3 } from "./heading"
-import { Paragraph as p } from "./paragraph"
 
 const customComponents = {
   h2,

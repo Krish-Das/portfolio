@@ -17,7 +17,7 @@ const Cite = forwardRef<HTMLQuoteElement, CiteProps>(
       <Comp
         ref={ref}
         className={cn(
-          "font-red0i text-label-primary/86 text-base not-italic",
+          "text-label-primary/86 text-base not-italic",
           "before:content-['⸻']",
           "before:text-label-primary/80 before:mr-[1ch]",
           className

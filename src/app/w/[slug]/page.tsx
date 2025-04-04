@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation"
 
 import { baseURL } from "@/lib/constants"
-import { formatDate } from "@/lib/utils"
+import { cn, formatDate } from "@/lib/utils"
 import { getWritings } from "@/lib/writing/utils"
 import Back from "@/components/ui/back-button"
 import { Container } from "@/components/ui/container"
 import { Section } from "@/components/ui/section"
 import { CustomMDX } from "@/components/mdx"
+import { Heading } from "@/components/typography"
 
 export async function generateStaticParams() {
   const articles = getWritings()
@@ -81,9 +82,14 @@ export default async function Article({
 
       <Container asChild>
         <Section asChild>
-          <main className="space-y-6">
+          <main className="space-y-12">
             <header className="">
-              <h1 className="text-4xl leading-tight font-bold -tracking-[0.015em]">
+              <h1
+                className={cn(
+                  "leading-tight -tracking-[0.015em]",
+                  "font-instrument-serif text-5xl font-normal"
+                )}
+              >
                 {metadata.title}
               </h1>
               <div className="space-x-2 text-base">
@@ -100,7 +106,7 @@ export default async function Article({
               </div>
             </header>
 
-            <h3 className="text-label-primary/80 text-lg leading-tight font-semibold tracking-tight">
+            <h3 className="text-label-primary/80 hidden text-xl leading-tight">
               {metadata.summary}
             </h3>
 

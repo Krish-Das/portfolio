@@ -15,7 +15,12 @@ const Em = forwardRef<HTMLElement, EmProps>(
     return (
       <Comp
         ref={ref}
-        className={cn("text-[1.25em] font-medium tracking-tight", className)}
+        className={cn(
+          "font-instrument-serif text-label-primary text-[1.3em] tracking-[0.00625em] italic",
+          // "font-garamond text-label-primary text-[1.2em] italic",
+          // "font-red0i",
+          className
+        )}
         {...rest}
       />
     )
