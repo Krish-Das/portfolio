@@ -7,7 +7,6 @@ import Back from "@/components/ui/back-button"
 import { Container } from "@/components/ui/container"
 import { Section } from "@/components/ui/section"
 import { CustomMDX } from "@/components/mdx"
-import { Heading } from "@/components/typography"
 
 export async function generateStaticParams() {
   const articles = getWritings()
