@@ -59,8 +59,10 @@
   --separator-opaque: color-mix( in oklab, var(--separator-opaque-color) 100%, transparent);
   --separator-non-opaque: color-mix( in oklab, var(--separator-non-opaque-color) var(--separator-non-opaque-opacity), transparent);
 
-  --selection-foreground-color:  color-mix(in oklab, var(--ios-blue) 12%, var(--label-primary-color));
-  --selection-background-color:  var(--ios-blue); /* oklch(47.34% 0.158966 255.5472); */
+  --selection-foreground-color: color-mix( in oklab, var(--ios-blue) 12%, var(--label-primary-color));
+  --selection-background-color: var(
+    --ios-blue
+  ); /* oklch(47.34% 0.158966 255.5472); */
   --selection-background-opacity: 20%;
 }
 
@@ -169,15 +171,25 @@ body {
   --color-separator-opaque: var(--separator-opaque);
   --color-separator-non-opaque: var(--separator-non-opaque);
 
-  --font-geist-mono: var(--font-geist-mono), Arial, Helvetica, sans-serif;
+  --font-jetbrains-mono: var(--font-jetbrains-mono), Arial, Helvetica, serif;
+
+  --font-instrument-serif: var(--font-instrument-serif), Arial, Helvetica, serif;
 }
 
 ::selection {
   color: var(--selection-foreground-color);
-  background-color: color-mix(in oklab, var(--selection-background-color) var(--selection-background-opacity), transparent); 
+  background-color: color-mix(
+    in oklab,
+    var(--selection-background-color) var(--selection-background-opacity),
+    transparent
+  );
 }
 
 ::-moz-selection {
   color: var(--selection-foreground-color);
-  background-color: color-mix(in oklab, var(--selection-background-color) var(--selection-background-opacity), transparent); 
+  background-color: color-mix(
+    in oklab,
+    var(--selection-background-color) var(--selection-background-opacity),
+    transparent
+  );
 }
