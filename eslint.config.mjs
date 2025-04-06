@@ -13,7 +13,16 @@ const compat = new FlatCompat({
 // https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
 const eslintConfig = [
   ...compat.config({
-    extends: ["next", "next/core-web-vitals", "next/typescript"],
+    extends: [
+      "next",
+      "next/core-web-vitals",
+      "next/typescript",
+      "plugin:mdx/recommended",
+    ],
+    settings: {
+      "mdx/code-blocks": true,
+      "mdx/language-mapper": {},
+    },
     rules: {
       eqeqeq: "off",
       quotes: ["warn", "double"],
