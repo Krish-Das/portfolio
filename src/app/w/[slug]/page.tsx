@@ -100,7 +100,7 @@ export default async function Article({
                 </small>
 
                 <small className="text-gray-1 bg-fill-quaternary pointer-events-none hidden touch-none rounded-md px-1.5 py-1 leading-none font-medium tracking-wide select-none md:inline-block">
-                  Last updated {formatDate(metadata.updatedAt, true, true)}
+                  Updated {formatDate(metadata.updatedAt, true, true)}
                 </small>
               </div>
             </header>
