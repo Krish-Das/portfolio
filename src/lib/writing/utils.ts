@@ -2,18 +2,18 @@ import fs from "fs"
 import path from "path"
 import { z } from "zod"
 
-export const ARTICLE_PATH = path.join(process.cwd(), "src", "articles")
+const ARTICLE_PATH = path.join(process.cwd(), "src", "articles")
 
-export const metadataSchema = z.object({
+const metadataSchema = z.object({
   title: z.string().min(3),
   publishedAt: z.string().date(),
   updatedAt: z.string().date(),
   summary: z.string().min(3),
   image: z.string().url().optional(),
 })
-export type Metadata = z.infer<typeof metadataSchema>
+type Metadata = z.infer<typeof metadataSchema>
 
-export type ArticleType = {
+type ArticleType = {
   metadata: Metadata
   slug: string
   content: string
@@ -66,6 +66,16 @@ function getMDXData(dir: string): ArticleType[] {
   })
 }
 
-export function getWritings() {
+function getWritings() {
   return getMDXData(ARTICLE_PATH)
+}
+
+export {
+  getWritings,
+  getMDXData,
+  readMDXFile,
+  ARTICLE_PATH,
+  metadataSchema,
+  type Metadata as ArticleMetadata,
+  type ArticleType,
 }
