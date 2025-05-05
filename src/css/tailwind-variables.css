@@ -38,9 +38,17 @@
   --color-separator-opaque: var(--separator-opaque);
   --color-separator-non-opaque: var(--separator-non-opaque);
 
+  --font-red0: var(--font-red0), Arial, Helvetica, serif;
+  --font-red0i: var(--font-red0i), Arial, Helvetica, serif;
+  --font-red0b: var(--font-red0b), Arial, Helvetica, serif;
+
   --font-geist-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 
   --font-jetbrains-mono: var(--font-jetbrains-mono), mono;
 
   --font-instrument-serif: var(--font-instrument-serif), serif;
+
+  --font-garamond: var(--font-garamond), serif;
+
+  --font-mona: var(--font-mona), sans-serif;
 }
